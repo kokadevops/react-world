@@ -5,7 +5,10 @@ import styles from "./Nav.module.css";
 function Nav() {
     return (
         <nav className={styles.nav}>
-            <Logo />
+            <div className={styles.logo}>
+                <Logo />
+                <NavLink to="/">World</NavLink>
+            </div>
             <ul>
                 <li>
                     <NavLink to="/pricing">Pricing</NavLink>

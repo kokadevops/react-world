@@ -1,8 +1,10 @@
 import Spinner from "./Spinner";
 import styles from "./CityList.module.css";
 import CityItem from "./CityItem";
+import { useCities } from "../contexts/CitiesContext";
 
-const CityList = ({ cities, isLoading }) => {
+const CityList = () => {
+    const { cities, isLoading } = useCities();
     if (isLoading) return <Spinner />;
     if (!cities.length) return <h3>Add yor disirable city to your list</h3>;
 

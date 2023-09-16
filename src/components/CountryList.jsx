@@ -1,8 +1,10 @@
+import { useCities } from "../contexts/CitiesContext";
 import CountryItem from "./CountryItem";
 import styles from "./CountryList.module.css";
 import Spinner from "./Spinner";
 
-function CountryList({ cities, isLoading }) {
+function CountryList() {
+    const { cities, isLoading } = useCities();
     if (isLoading) return <Spinner />;
 
     if (!cities.length) return <h3>Add yor disirable country to your list</h3>;
